@@ -406,7 +406,7 @@ header .container {
 
 .menu-visual {
     height: 300px;
-    background: url('../images/menu-bg.jpg') no-repeat center;
+    background: url('../images/buger_bg.jpg') no-repeat center;
     background-size: cover;
     display: flex;
     align-items: center;

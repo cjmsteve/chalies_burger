@@ -2,7 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>찰리스버거 - 프리미엄 햄버거</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
@@ -64,7 +65,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <!-- 메뉴 하이라이트 섹션 -->
@@ -100,15 +100,21 @@
                 <h2>매장 찾기</h2>
                 <div class="store-map">
                     <!--네이버 지도 API-->
+                    <div id="map" style="width:100%; height:400px;"></div>
                     <script>
-                        var mapOptions = {
-                            center: new naver.maps.LatLng(37.3595704, 127.105399),
-                            zoom: 10
-                        };
 
-                        var map = new naver.maps.Map('map', mapOptions);
+                        var map = new naver.maps.Map('map', {
+                            center: new naver.maps.LatLng(37.37177, 127.06966),
+                            zoom: 15
+                        });
+
+                        var marker = new naver.maps.Marker({
+                            position: new naver.maps.LatLng(37.37177, 127.06966),
+                            map: map
+                        });
                     </script>
                 </div>
+            </div>
         </section>
 
         <!-- 이벤트/프로모션 섹션 -->
