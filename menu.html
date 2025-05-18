@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 - 찰리스버거</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<!-- 헤더 영역 -->
+<header>
+        <div class="container">
+            <div class="logo">
+                <a href="charliesburger.html">
+                    <img src="images/logo.png" alt="찰리스버거 로고">
+                </a>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="brand.html">브랜드 소개</a></li>
+                    <li><a href="menu.html" class="active">메뉴</a></li>
+                    <li><a href="stores.html">매장 안내</a></li>
+                    <li><a href="events.html">이벤트/프로모션</a></li>
+                    <li><a href="news.html">뉴스/소식</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main>
+        <!-- 페이지 타이틀 영역 -->
+        <section class="page-title">
+            <div class="container">
+                <h1>메뉴</h1>
+                <p>찰리스버거의 다양한 메뉴를 만나보세요</p>
+            </div>
+        </section>
+
+        <!-- 메뉴 카테고리 네비게이션 -->
+        <section class="menu-navigation">
+            <div class="container">
+                <ul class="menu-categories">
+                    <li class="active"><a href="#burgers">버거</a></li>
+                    <li><a href="#sides">사이드</a></li>
+                    <li><a href="#drinks">음료</a></li>
+                    <li><a href="#sets">세트메뉴</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 버거 메뉴 섹션 -->
+        <section id="burgers" class="menu-section">
+            <div class="container">
+                <h2>버거</h2>
+                <p class="section-desc">신선한 재료와 특별한 레시피로 만든 찰리스버거의 시그니처 버거</p>
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-signature.jpg" alt="시그니처 버거">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-name-price">
+                                <h3>찰리스 시그니처 버거</h3>
+                                <span class="price">8,900원</span>
+                            </div>
+                            <p class="menu-desc">특제 소스와 프리미엄 패티, 신선한 야채가 조화롭게 어우러진 찰리스버거의 대표 메뉴</p>
+                            <div class="menu-badge">BEST</div>
+                            <button class="btn-order">주문하기</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-cheese.jpg" alt="치즈 버거">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-name-price">
+                                <h3>더블 치즈 버거</h3>
+                                <span class="price">9,500원</span>
+                            </div>
+                            <p class="menu-desc">두 장의 패티와 풍부한 치즈가 가득 들어간 치즈 버거. 진한 치즈의 풍미를 즐길 수 있습니다.</p>
+                            <div class="menu-badge">POPULAR</div>
+                            <button class="btn-order">주문하기</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-avocado.jpg" alt="아보카도 버거">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-name-price">
+                                <h3>아보카도 버거</h3>
+                                <span class="price">10,500원</span>
+                            </div>
+                            <p class="menu-desc">신선한 아보카도와 패티의 조합. 건강하면서도 풍부한 맛을 느낄 수 있는 프리미엄 버거입니다.</p>
+                            <button class="btn-order">주문하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 사이드 메뉴 섹션 -->
+        <section id="sides" class="menu-section">
+            <div class="container">
+                <h2>사이드</h2>
+                <p class="section-desc">버거와 함께 즐길 수 있는 다양한 사이드 메뉴</p>
+
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-fries.jpg" alt="감자튀김">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-name-price">
+                                <h3>프리미엄 감자튀김</h3>
+                                <span class="price">4,000원</span>
+                            </div>
+                            <p class="menu-desc">엄선된 감자로 만든 바삭한 감자튀김. 찰리스버거만의 특제 시즈닝으로 맛을 더했습니다.</p>
+                            <button class="btn-order">주문하기</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-image">
+                            <img src="images/menu-onion.jpg" alt="어니언 링">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-name-price">
+                                <h3>어니언 링</h3>
+                                <span class="price">4,500원</span>
+                            </div>
+                            <p class="menu-desc">신선한 양파로 만든 바삭한 어니언 링. 특제 소스와 함께 즐기는 인기 메뉴입니다.</p>
+                            <button class="btn-order">주문하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="images/logo-footer.png" alt="찰리스버거 로고">
+                </div>
+                <div class="company-info">
+                    <p>(주)찰리스버거 | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
+                    <p>주소: 서울특별시 강남구 테헤란로 123 찰리스빌딩 8층</p>
+                    <p>고객센터: 1588-1234 (평일 09:00-18:00, 주말 및 공휴일 휴무)</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="sitemap">
+                    <h3>사이트맵</h3>
+                    <ul>
+                        <li><a href="brand.html">브랜드 소개</a></li>
+                        <li><a href="menu.html">메뉴</a></li>
+                        <li><a href="stores.html">매장 안내</a></li>
+                        <li><a href="events.html">이벤트/프로모션</a></li>
+                        <li><a href="news.html">뉴스/소식</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <h3>소셜미디어</h3>
+                    <ul>
+                        <li><a href="#" target="_blank">인스타그램</a></li>
+                        <li><a href="#" target="_blank">페이스북</a></li>
+                        <li><a href="#" target="_blank">유튜브</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2023 찰리스버거. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

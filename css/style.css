@@ -1,0 +1,998 @@
+/* 전체 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 버튼 스타일 */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #FF6B00;
+    color: white;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #E05A00;
+    transform: translateY(-2px);
+}
+
+.more-btn {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.more-btn a {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #FF6B00;
+    color: #FF6B00;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.more-btn a:hover {
+    background-color: #FF6B00;
+    color: white;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.main-menu {
+    display: flex;
+}
+
+.main-menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.main-menu li a {
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative;
+}
+
+.main-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #e74c3c;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.main-menu li a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* 메인 비주얼 섹션 */
+.main-visual {
+    padding-top: 80px;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+}
+
+.slide-content h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* 메뉴 하이라이트 섹션 */
+.menu-highlight {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.menu-highlight h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.menu-highlight h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-item {
+    width: 350px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+}
+
+.menu-item p {
+    margin-bottom: 20px;
+    color: #666;
+    padding: 0 15px;
+}
+
+/* 매장 정보 섹션 */
+.store-info {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.store-info h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.store-info h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+
+/* 이벤트/프로모션 섹션 */
+.events {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.events h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.events h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.event-item {
+    width: 570px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-content p {
+    color: #666;
+}
+
+/* 브랜드 스토리 미리보기 섹션 */
+.brand-story-preview {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.brand-story-preview .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.story-content h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 0;
+}
+
+.story-content p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 메뉴 페이지 스타일 */
+.menu-page {
+    padding-top: 80px;
+}
+
+.menu-visual {
+    height: 300px;
+    background: url('../images/menu-bg.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu-visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-visual .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.menu-visual h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.menu-visual p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.menu-category {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.category-tabs li {
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.category-tabs li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #FF6B00;
+    transition: width 0.3s ease;
+}
+
+.category-tabs li:hover::after {
+    width: 50%;
+}
+
+.category-tabs li.active {
+    color: #FF6B00;
+    font-weight: 700;
+}
+
+.category-tabs li.active::after {
+    width: 70%;
+}
+
+.menu-items {
+    padding: 60px 0;
+}
+
+.menu-items h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.menu-items h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.05);
+}
+
+.menu-info {
+    padding: 20px;
+}
+
+.menu-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.menu-description {
+    margin-bottom: 15px;
+    color: #666;
+    min-height: 50px;
+}
+
+.menu-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FF6B00;
+}
+
+/* 브랜드 페이지 스타일 */
+.brand-page {
+    padding-top: 80px;
+}
+
+.brand-visual {
+    height: 350px;
+    background: url('../images/brand-bg.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.brand-visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.brand-visual .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.brand-visual h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.brand-visual p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.brand-story {
+    padding: 80px 0;
+}
+
+.story-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 50px;
+}
+
+.story-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-content h2 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.story-content h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 0;
+}
+
+.story-section.reverse .story-content h2::after {
+    left: auto;
+    right: 0;
+}
+
+.story-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.brand-philosophy {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.brand-philosophy h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.brand-philosophy h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.philosophy-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.philosophy-item {
+    width: 350px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.philosophy-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.philosophy-item p {
+    color: #666;
+}
+
+.taste-secret {
+    padding: 80px 0;
+}
+
+.taste-secret h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.taste-secret h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.secret-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.secret-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.secret-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.secret-content {
+    padding: 20px;
+}
+
+.secret-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.secret-content p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #222;
+    color: #aaa;
+    padding: 60px 0 0;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.company-info p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+}
+
+.sitemap, .social-links {
+    margin-right: 50px;
+}
+
+.sitemap h3, .social-links h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.sitemap ul li, .social-links ul li {
+    margin-bottom: 10px;
+}
+
+.sitemap ul li a, .social-links ul li a {
+    color: #aaa;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.sitemap ul li a:hover, .social-links ul li a:hover {
+    color: #FF6B00;
+}
+
+.copyright {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 992px) {
+    .main-menu {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .brand-story-preview .container {
+        flex-direction: column;
+    }
+
+    .story-content, .story-image {
+        width: 100%;
+    }
+
+    .footer-info {
+        margin-right: 0;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-item {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .slide-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .event-item {
+        width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        margin-top: 30px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sitemap, .social-links {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header .container {
+        height: 70px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .main-visual {
+        height: 60vh;
+        padding-top: 70px;
+    }
+
+    .menu-highlight h2,
+    .store-info h2,
+    .events h2,
+    .story-content h2 {
+        font-size: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .sitemap, .social-links {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .story-section, .story-section.reverse {
+        flex-direction: column;
+    }
+
+    .story-content, .story-image {
+        width: 100%;
+    }
+
+    .story-content {
+        margin-bottom: 30px;
+    }
+
+    .secret-item {
+        flex-direction: column;
+    }
+
+    .secret-item img {
+        width: 100%;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .category-tabs {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+
+    .category-tabs li {
+        padding: 15px 20px;
+        white-space: nowrap;
+    }
+
+    .philosophy-item {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .menu-visual h1, .brand-visual h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .menu-visual, .brand-visual {
+        height: 250px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-tabs li {
+        padding: 15px 15px;
+        font-size: 0.9rem;
+    }
+
+    .menu-image {
+        height: 200px;
+    }
+}
