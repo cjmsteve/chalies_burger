@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function loadMoreNews() {
     const newsContainer = document.querySelector('.news-items');
     if (newsContainer) {
-        // 임시 뉴스 데이터 (실제로는 API 호출 또는 서버에서 가져와야 함)
         const moreNews = [
             {
                 title: '찰리스버거, 신메뉴 출시 이벤트 진행',
@@ -64,20 +63,6 @@ function loadMoreNews() {
     }
 }
 
-// 매장 정보 검색 기능
-function searchStore() {
-    const searchInput = document.querySelector('.store-search input');
-    if (searchInput) {
-        const keyword = searchInput.value.trim();
-        if (keyword) {
-            // 여기에 검색 처리 로직 추가 (실제로는 API 호출 또는 필터링)
-            console.log('매장 검색:', keyword);
-            alert(`"${keyword}" 검색 결과를 준비 중입니다.`);
-        } else {
-            alert('검색어를 입력해주세요.');
-        }
-    }
-}
 
 // 이벤트 검색 버튼에 이벤트 리스너 추가
 document.addEventListener('DOMContentLoaded', function () {

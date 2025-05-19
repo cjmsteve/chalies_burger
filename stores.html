@@ -6,6 +6,7 @@
     <title>매장 안내 - 찰리스버거</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=4zw3f216sj"></script>
 </head>
 <body>
 <!-- 헤더 영역 -->
@@ -35,35 +36,40 @@
 
 <!-- 메인 컨텐츠 영역 -->
 <main>
-    <!-- 페이지 타이틀 영역 -->
-    <section class="page-title">
-        <div class="container">
-            <h1>매장 안내</h1>
-            <p>가까운 찰리스버거 매장을 찾아보세요</p>
-        </div>
-    </section>
-
 
     <!-- 매장 지도 영역 -->
-    <section class="store-map-section">
+    <section class="store-info">
         <div class="container">
-            <div class="map-container">
-                <div id="map"></div>
+            <h2>매장 위치</h2>
+            <div class="store-map">
+                <!--네이버 지도 API-->
+                <div id="map" style="width:100%; height:400px;"></div>
+                <script>
+
+                    var map = new naver.maps.Map('map', {
+                        center: new naver.maps.LatLng(37.37177, 127.06966),
+                        zoom: 15
+                    });
+
+                    var marker = new naver.maps.Marker({
+                        position: new naver.maps.LatLng(37.37177, 127.06966),
+                        map: map
+                    });
+                </script>
             </div>
         </div>
     </section>
 
     <!-- 매장 오픈 안내 -->
-    <section class="store-open-guide">
+    <section>
         <div class="container">
-            <h2>매장 개설 안내</h2>
-            <div class="open-guide-content">
-                <div class="guide-text">
-                    <p>찰리스버거와 함께 성장할 파트너를 찾습니다. 프리미엄 버거 브랜드 찰리스버거의 가맹점 개설에 관심이 있으시다면 아래 버튼을 통해 상담 신청을 해주세요.</p>
-                    <a href="#" class="btn">가맹 상담 신청</a>
+            <h2>찾아오는길</h2>
+            <div>
+                <div>
+                    <p>찾아오는길</p>
                 </div>
                 <div class="guide-image">
-                    <img src="images/error.png" alt="찰리스버거 매장 이미지">
+                    <img src="images/shop_main.jpeg" alt="찰리스버거 매장 이미지">
                 </div>
             </div>
         </div>
@@ -80,7 +86,7 @@
             <div class="company-info">
                 <p>(주)찰리스버거 | 대표: 찰리 | 사업자등록번호: 123-45-67890</p>
                 <p>주소: 서울특별시 강남구 테헤란로 123 찰리스빌딩 8층</p>
-                <p>고객센터: 1588-1234 (평일 09:00-18:00, 주말 및 공휴일 휴무)</p>
+                <p>운영시간: (평일 09:00-18:00, 주말 및 공휴일 휴무)</p>
             </div>
         </div>
         <div class="footer-links">
