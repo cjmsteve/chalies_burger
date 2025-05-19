@@ -137,7 +137,7 @@ header .container {
 /* 메인 비주얼 섹션 */
 .main-visual {
     padding-top: 80px;
-    height: 80vh;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
