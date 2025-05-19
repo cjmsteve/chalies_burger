@@ -142,14 +142,12 @@ header .container {
     overflow: hidden;
 }
 
-.slider {
-    height: 100%;
-    position: relative;
-}
-
 .slide {
     height: 100%;
     position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+
 }
 
 .slide img {
