@@ -695,21 +695,7 @@ header .container {
     transform: translateX(-50%);
 }
 
-.philosophy-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
 
-.philosophy-item {
-    width: 350px;
-    text-align: center;
-    padding: 30px 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 
 .icon {
     width: 80px;
@@ -730,65 +716,6 @@ header .container {
 
 .philosophy-item p {
     color: #666;
-}
-
-.taste-secret {
-    padding: 80px 0;
-}
-
-.taste-secret h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.taste-secret h2::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.secret-items {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.secret-item {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.secret-item img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.secret-content {
-    padding: 20px;
-}
-
-.secret-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.secret-content p {
-    color: #666;
-    line-height: 1.7;
 }
 
 /* 푸터 스타일 */
@@ -856,6 +783,7 @@ footer .container {
 }
 
 /* 반응형 스타일 */
+
 @media (max-width: 992px) {
     .main-menu {
         display: none;

@@ -11,7 +11,6 @@
 ├── menu.html           # 메뉴 페이지
 ├── stores.html         # 매장 안내 페이지
 ├── events.html         # 이벤트/프로모션 페이지
-├── news.html           # 뉴스/소식 페이지
 ├── css/
 │   └── style.css       # 스타일시트
 ├── js/
