@@ -284,10 +284,6 @@ header .container {
     border: 1px solid #ddd;
 }
 
-#marker{
-
-}
-
 
 /* 이벤트/프로모션 섹션 */
 .events {
@@ -399,177 +395,6 @@ header .container {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* 메뉴 페이지 스타일 */
-.menu-page {
-    padding-top: 80px;
-}
-
-.menu-visual {
-    height: 300px;
-    background: url('../images/buger_bg.jpg') no-repeat center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.menu-visual::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.menu-visual .container {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white;
-}
-
-.menu-visual h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.menu-visual p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.menu-category {
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 80px;
-    z-index: 10;
-}
-
-.category-tabs {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-.category-tabs li {
-    padding: 15px 30px;
-    cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.category-tabs li::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 3px;
-    background-color: #FF6B00;
-    transition: width 0.3s ease;
-}
-
-.category-tabs li:hover::after {
-    width: 50%;
-}
-
-.category-tabs li.active {
-    color: #FF6B00;
-    font-weight: 700;
-}
-
-.category-tabs li.active::after {
-    width: 70%;
-}
-
-.menu-items {
-    padding: 60px 0;
-}
-
-.menu-items h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.menu-items h2::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.menu-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.menu-image {
-    height: 250px;
-    overflow: hidden;
-}
-
-.menu-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-}
-
-.menu-card:hover .menu-image img {
-    transform: scale(1.05);
-}
-
-.menu-info {
-    padding: 20px;
-}
-
-.menu-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.menu-description {
-    margin-bottom: 15px;
-    color: #666;
-    min-height: 50px;
-}
-
-.menu-price {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #FF6B00;
 }
 
 /* 브랜드 페이지 스타일 */
@@ -697,27 +522,6 @@ header .container {
 
 
 
-.icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
-}
-
-.icon img {
-    width: 100%;
-    height: 100%;
-}
-
-.philosophy-item h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.philosophy-item p {
-    color: #666;
-}
-
 /* 푸터 스타일 */
 footer {
     background-color: #222;
@@ -787,18 +591,44 @@ footer .container {
 @media (max-width: 992px) {
     .main-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .main-menu.active {
+        display: flex;
+    }
+
+    .main-menu li {
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
     }
 
     .mobile-menu-toggle {
         display: flex;
     }
 
-    .brand-story-preview .container {
-        flex-direction: column;
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
     }
 
-    .story-content, .story-image {
-        width: 100%;
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .brand-story-preview .container {
+        flex-direction: column;
     }
 
     .footer-info {
@@ -884,14 +714,6 @@ footer .container {
         margin-bottom: 30px;
     }
 
-    .secret-item {
-        flex-direction: column;
-    }
-
-    .secret-item img {
-        width: 100%;
-    }
-
     .menu-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
@@ -909,21 +731,9 @@ footer .container {
         white-space: nowrap;
     }
 
-    .philosophy-item {
-        width: 100%;
-        max-width: 450px;
-    }
-
-    .menu-visual h1, .brand-visual h1 {
-        font-size: 2.3rem;
-    }
 }
 
 @media screen and (max-width: 576px) {
-    .menu-visual, .brand-visual {
-        height: 250px;
-    }
-
     .menu-grid {
         grid-template-columns: 1fr;
     }
