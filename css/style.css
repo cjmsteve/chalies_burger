@@ -33,6 +33,90 @@ img {
     height: auto;
 }
 
+/* 공통 섹션 제목 스타일 */
+.section-title,
+.menu-highlight h2,
+.store-info h2,
+.events h2,
+.story-content h2,
+.menu-section h2,
+.brand-philosophy h2,
+.page-title h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    color: #333;
+}
+
+.section-title::after,
+.menu-highlight h2::after,
+.store-info h2::after,
+.events h2::after,
+.menu-section h2::after,
+.brand-philosophy h2::after,
+.story-content h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-title h1::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #FF6B00;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.story-content h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #FF6B00;
+    bottom: -15px;
+    left: 0;
+}
+
+/* 공통 카드 스타일 */
+.card-style,
+.menu-item,
+.event-item,
+.menu-section .menu-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-style:hover,
+.menu-item:hover,
+.event-item:hover,
+.menu-section .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-section .menu-item {
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section .menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
 /* 버튼 스타일 */
 .btn {
     display: inline-block;
@@ -147,7 +231,6 @@ header .container {
     position: relative;
     border-radius: 50px;
     overflow: hidden;
-
 }
 
 .slide img {
@@ -180,24 +263,6 @@ header .container {
 .menu-highlight {
     padding: 80px 0;
     background-color: #f9f9f9;
-}
-
-.menu-highlight h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.menu-highlight h2:after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .menu-items {
@@ -256,25 +321,6 @@ header .container {
     background-color: #f9f9f9;
 }
 
-.store-info h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.store-info h2:after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
 #map {
     width: 100%;
     height: 400px;
@@ -284,29 +330,10 @@ header .container {
     border: 1px solid #ddd;
 }
 
-
 /* 이벤트/프로모션 섹션 */
 .events {
     padding: 80px 0;
     background-color: #f9f9f9;
-}
-
-.events h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.events h2:after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .event-items {
@@ -363,22 +390,6 @@ header .container {
 
 .story-content {
     flex: 1;
-}
-
-.story-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.story-content h2:after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 0;
 }
 
 .story-content p {
@@ -456,29 +467,13 @@ header .container {
     flex-direction: row-reverse;
 }
 
-.story-content {
-    flex: 1;
-}
-
-.story-content h2 {
-    font-size: 2.3rem;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.story-content h2::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 0;
-}
-
 .story-section.reverse .story-content h2::after {
     left: auto;
     right: 0;
+}
+
+.story-content {
+    flex: 1;
 }
 
 .story-content p {
@@ -502,25 +497,190 @@ header .container {
     background-color: #f9f9f9;
 }
 
-.brand-philosophy h2 {
+/* ================================
+   메뉴 페이지 전용 스타일
+   ================================ */
+
+/* 페이지 타이틀 */
+.page-title {
+    padding: 120px 0 60px;
+    background-color: #fff;
     text-align: center;
+}
+
+.page-title p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 30px;
+}
+
+/* 메뉴 카테고리 네비게이션 */
+.menu-navigation {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu-categories li {
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-categories li.active {
+    background-color: #FF6B00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+}
+
+.menu-categories li.active a {
+    color: white;
+}
+
+.menu-categories li a {
+    display: block;
+    padding: 12px 25px;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.menu-categories li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.menu-categories li:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+.menu-categories li:hover:not(.active) a {
+    color: #FF6B00;
+}
+
+/* 메뉴 섹션 */
+.menu-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.menu-section:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.menu-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
     position: relative;
 }
 
-.brand-philosophy h2::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #FF6B00;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
+.section-desc {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
 }
 
+/* 메뉴 그리드 */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
 
+.menu-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-image img {
+    transform: scale(1.05);
+}
+
+.menu-content {
+    padding: 25px;
+    position: relative;
+}
+
+.menu-name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.menu-name-price h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 1.3rem;
+    color: #FF6B00;
+    font-weight: 700;
+}
+
+.menu-desc {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.menu-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #FF6B00;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.menu-badge:nth-of-type(2) {
+    background-color: #e74c3c;
+}
+
+/* HR 스타일 */
+.menu-section hr {
+    width: 100px;
+    height: 3px;
+    background-color: #FF6B00;
+    border: none;
+    margin: 0 auto 30px;
+}
+
+/* ================================
+   브랜드 페이지 전용 스타일
+   ================================ */
 
 /* 푸터 스타일 */
 footer {
@@ -636,8 +796,36 @@ footer .container {
         margin-bottom: 30px;
         width: 100%;
     }
+
+    .story-section,
+    .story-section.reverse {
+        flex-direction: column;
+    }
+
+    .story-content,
+    .story-image {
+        width: 100%;
+    }
+
+    .story-content {
+        margin-bottom: 30px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .page-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-section h2 {
+        font-size: 2rem;
+    }
 }
 
+/* 모바일 가로 */
 @media screen and (max-width: 768px) {
     .menu-item {
         width: 100%;
@@ -669,8 +857,43 @@ footer .container {
     .sitemap, .social-links {
         margin-right: 0;
     }
+
+    .menu-categories {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        gap: 15px;
+    }
+
+    .menu-categories li {
+        flex-shrink: 0;
+    }
+
+    .menu-categories li a {
+        padding: 10px 20px;
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .page-title {
+        padding: 100px 0 40px;
+    }
+
+    .page-title h1 {
+        font-size: 2.2rem;
+    }
+
+    .menu-section {
+        padding: 40px 0;
+    }
 }
 
+/* 모바일 세로 */
 @media screen and (max-width: 576px) {
     header .container {
         height: 70px;
@@ -699,51 +922,54 @@ footer .container {
     .sitemap, .social-links {
         margin-bottom: 20px;
     }
-}
 
-@media screen and (max-width: 992px) {
-    .story-section, .story-section.reverse {
-        flex-direction: column;
-    }
-
-    .story-content, .story-image {
-        width: 100%;
-    }
-
-    .story-content {
-        margin-bottom: 30px;
-    }
-
-    .menu-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .category-tabs {
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding-bottom: 5px;
-    }
-
-    .category-tabs li {
-        padding: 15px 20px;
-        white-space: nowrap;
-    }
-
-}
-
-@media screen and (max-width: 576px) {
     .menu-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .category-tabs li {
-        padding: 15px 15px;
-        font-size: 0.9rem;
+    .menu-navigation {
+        top: 70px;
+    }
+
+    .menu-categories li a {
+        padding: 8px 15px;
+        font-size: 0.85rem;
     }
 
     .menu-image {
         height: 200px;
+    }
+
+    .page-title {
+        padding: 90px 0 30px;
+    }
+
+    .page-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-title p {
+        font-size: 1rem;
+    }
+
+    .menu-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .menu-content {
+        padding: 20px;
+    }
+
+    .menu-name-price h3 {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+
+    .menu-desc {
+        font-size: 0.9rem;
     }
 }
