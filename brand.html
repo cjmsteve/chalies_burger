@@ -34,73 +34,125 @@
 
     <!-- 메인 컨텐츠 영역 -->
     <main>
-        <!-- 페이지 타이틀 영역 -->
-        <section class="page-title">
+        <!-- 히어로 섹션 -->
+        <section class="brand-hero">
+            <div class="hero-background">
+                <img src="images/buger_bg.jpg" alt="찰리스버거 배경">
+                <div class="hero-overlay"></div>
+            </div>
             <div class="container">
-                <h1>브랜드 소개</h1>
-                <p>찰리스버거의 이야기와 가치를 소개합니다</p>
+                <div class="hero-content">
+                    <h1>브랜드 스토리</h1>
+                    <p>정성과 품질로 만들어진 찰리스버거의 특별한 이야기</p>
+                    <div class="hero-scroll-indicator">
+                        <span>스크롤하여 더 보기</span>
+                        <div class="scroll-arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 브랜드 소개 -->
+        <section class="brand-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h2>찰리스버거를 소개합니다</h2>
+                        <p class="intro-lead">2015년 작은 매장에서 시작된 찰리스버거는 최고의 재료와 정성스런 손맛으로 고객들의 마음을 사로잡았습니다.</p>
+                        <p>우리는 단순히 버거를 파는 것이 아닌, 특별한 경험과 추억을 만들어가는 브랜드입니다. 매일 아침 직접 구운 빵, 신선한 국내산 한우 패티, 그리고 정성을 다한 수제
+                            조리법으로 완성되는 찰리스버거만의 맛을 선보입니다.</p>
+                        <div class="brand-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🥖</span>
+                                <span class="feature-text">매일 아침 직접 구운 신선한 빵</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🥩</span>
+                                <span class="feature-text">엄선된 국내산 한우 패티</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">👨‍🍳</span>
+                                <span class="feature-text">주문 즉시 수제로 조리</span>
+                            </div>
+                        </div>
+                        <div class="brand-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">전국 매장</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8년</span>
+                                <span class="stat-label">브랜드 역사</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">수제 조리</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- 브랜드 히스토리 -->
-        <section class="brand-history">
+        <section class="brand-timeline">
             <div class="container">
-                <h2>찰리스버거 스토리</h2>
-                <div class="timeline-item">
-                    <div class="year">2018</div>
-                    <div class="content">
-                        <h3>찰리스버거 구상</h3>
-                        <p>사업 아이디어 구상</p>
-                        <img src="images/error.png" alt="2015년 사업 구상">
-                    </div>
+                <div class="section-header">
+                    <h2>찰리스버거의 여정</h2>
+                    <p>작은 시작에서 전국구 브랜드로 성장한 우리의 이야기</p>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="year">2015</div>
-                        <div class="content">
-                            <h3>찰리스버거 첫 매장 개점</h3>
-                            <p>찰리가 정자 거리에서 3평 정도의 매장으로 시작하다.</p>
-                            <img src="images/history1.jpg" alt="2015년 푸드트럭">
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item" data-year="2013">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="images/logo.jpeg" alt="2013년 사업구상">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>찰리스버거 사업 구상</h3>
+                                <p class="timeline-year">2013</p>
+                                <p>찰리의 수제버거 사업 아이디어 구상</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="year">2018</div>
-                        <div class="content">
-                            <h3>주식회사 설립</h3>
-                            <p>(주)찰리스버거 설립 및 가맹사업 시작</p>
-                            <img src="images/error.png" alt="2015년 회사 설립">
+                    <div class="timeline-item reverse" data-year="2015">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="images/logo1.png" alt="2015년 사업자등록">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>사업자등록</h3>
+                                <p class="timeline-year">2015</p>
+                                <p>(주)찰리스버거를 설립하고 본격적인 가맹사업을 시작했습니다. 체계적인 시스템과 품질관리로 확장의 기반을 마련했습니다.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="year">2018</div>
-                        <div class="content">
-                            <h3>주식회사 설립</h3>
-                            <p>(주)찰리스버거 설립 및 가맹사업 시작</p>
-                            <img src="images/error.png" alt="2015년 회사 설립">
+                    <div class="timeline-item" data-year="2015">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="images/history1.jpg" alt="2015년 확장">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>첫 매장 개점</h3>
+                                <p class="timeline-year">2015</p>
+                                <p>찰리가 정자 거리에서 3평 정도의 작은 매장으로 시작했습니다. 작지만 큰 꿈을 품고 시작된 첫걸음이었습니다.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="year">20120</div>
-                        <div class="content">
-                            <h3>경기 지여 확장</h3>
-                            <p>경기권 내에 매장 다수 개장</p>
-                            <img src="images/error.png" alt="2018년 전국 확장">
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="year">2020</div>
-                        <div class="content">
-                            <h3>10주년 기념</h3>
-                            <p>창립 10주년을 맞이하여 프리미엄 버거 라인업 확장 및 30호점 달성</p>
-                            <img src="images/error.png" alt="2020년 10주년">
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="year">2023</div>
-                        <div class="content">
-                            <h3>현재</h3>
-                            <p>50호점 돌파 및 더 건강하고 맛있는 버거를 위한 끊임없는 연구 개발</p>
-                            <img src="images/error.png" alt="2023년 현재">
+                    <div class="timeline-item reverse" data-year="2018">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="images/member.jpg" alt="2018년 ~ 현재">
+                            </div>
+                            <div class="timeline-text">
+                                <h3>경기권 확장</h3>
+                                <p class="timeline-year">2018 ~ 현재</p>
+                                <p>경기권 내 다수의 매장을 개장하며 지역 대표 맛집 브랜드로 자리잡았습니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,18 +162,39 @@
         <!-- 브랜드 철학 -->
         <section class="brand-philosophy">
             <div class="container">
-                <h2>찰리스버거의 철학</h2>
                 <div class="philosophy-content">
-                    <div class="philosophy-text">
-                        <h3>최고의 재료만을 사용합니다</h3>
-                        <p>찰리스버거는 오직 신선한 국내산 한우 패티와 매일 아침 직접 구운 빵만을 사용합니다. 우리는 재료의 품질이 맛의 기본이라고 믿습니다.</p>
-                        <h3>정성을 다한 수제버거</h3>
-                        <p>모든 버거는 주문과 동시에 조리되며, 정성을 다해 수제로 만들어집니다. 빠른 서비스보다는 완벽한 맛을 추구합니다.</p>
-                        <h3>지속가능한 비즈니스</h3>
-                        <p>환경에 미치는 영향을 최소화하기 위해 생분해성 포장재를 사용하고, 지역 농가와의 직거래를 통해 신선한 식재료를 공급받고 있습니다.</p>
+                    <div class="section-header">
+                        <h2>찰리스버거의 철학</h2>
+                        <p>우리가 추구하는 가치와 신념</p>
                     </div>
-                    <div class="philosophy-image">
-                        <img src="images/error.png" alt="찰리스버거 철학">
+                    <div class="philosophy-items">
+                        <div class="philosophy-item">
+                            <div class="philosophy-icon">
+                                <span>🥩</span>
+                            </div>
+                            <div class="philosophy-text">
+                                <h3>최고의 재료만을 사용합니다</h3>
+                                <p>100% 소고기 패티와 매일 아침 받는 야채을 사용합니다. 재료의 품질이 맛의 기본이라고 믿습니다.</p>
+                            </div>
+                        </div>
+                        <div class="philosophy-item">
+                            <div class="philosophy-icon">
+                                <span>👨‍🍳</span>
+                            </div>
+                            <div class="philosophy-text">
+                                <h3>정성을 다한 수제버거</h3>
+                                <p>모든 버거는 주문과 동시에 조리되며, 정성을 다해 수제로 만들어집니다. 빠른 서비스보다는 완벽한 맛을 추구합니다.</p>
+                            </div>
+                        </div>
+                        <div class="philosophy-item">
+                            <div class="philosophy-icon">
+                                <span>🌱</span>
+                            </div>
+                            <div class="philosophy-text">
+                                <h3>질좋은 서비스</h3>
+                                <p>정확하고 친절한 서비스를 제공하기 위해 최선을 다합니다.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,69 +203,124 @@
         <!-- 핵심 가치 -->
         <section class="core-values">
             <div class="container">
-                <h2>핵심 가치</h2>
-                <div class="values-grid">
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <img src="images/" alt="품질 아이콘">
+                <div class="section-header">
+                    <h2>핵심 가치</h2>
+                    <p>찰리스버거가 추구하는 4가지 핵심 가치</p>
+                </div>
+                <div class="simple-values-grid">
+                    <div class="simple-value-item">
+                        <div class="value-number">01</div>
+                        <div class="simple-value-content">
+                            <h3>최상의 품질</h3>
+                            <p>타협하지 않는 재료 선택과 조리 과정을 통해 최상의 맛을 제공합니다.</p>
                         </div>
-                        <h3>최상의 품질</h3>
-                        <p>타협하지 않는 재료 선택과 조리 과정을 통해 최상의 맛을 제공합니다.</p>
                     </div>
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <img src="images/error.png" alt="혁신 아이콘">
+                    <div class="simple-value-item">
+                        <div class="value-number">02</div>
+                        <div class="simple-value-content">
+                            <h3>끊임없는 혁신</h3>
+                            <p>새로운 맛과 경험을 위한 지속적인 연구와 개발을 이어갑니다.</p>
                         </div>
-                        <h3>끊임없는 혁신</h3>
-                        <p>새로운 맛과 경험을 위한 지속적인 연구와 개발을 이어갑니다.</p>
                     </div>
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <img src="images/error.png" alt="서비스 아이콘">
+                    <div class="simple-value-item">
+                        <div class="value-number">03</div>
+                        <div class="simple-value-content">
+                            <h3>고객 중심 서비스</h3>
+                            <p>고객의 만족과 행복이 우리의 최우선 가치입니다.</p>
                         </div>
-                        <h3>고객 중심 서비스</h3>
-                        <p>고객의 만족과 행복이 우리의 최우선 가치입니다.</p>
                     </div>
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <img src="images/error.png" alt="지역사회 아이콘">
+                    <div class="simple-value-item">
+                        <div class="value-number">04</div>
+                        <div class="simple-value-content">
+                            <h3>지역사회 공헌</h3>
+                            <p>지역사회와 함께 성장하고 발전하는 기업이 되겠습니다.</p>
                         </div>
-                        <h3>지역사회 공헌</h3>
-                        <p>지역사회와 함께 성장하고 발전하는 기업이 되겠습니다.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 팀 소개 -->
-        <section class="team-intro">
+        <!-- 팀 소개
+        <section class="team-section">
             <div class="container">
-                <h2>찰리스버거 팀</h2>
-                <div class="team-members">
-                    <div class="team-member">
-                        <div class="member-image">
-                            <img src="images/error.png" alt="찰리 대표">
+                <div class="section-header">
+                    <h2>찰리스버거 팀</h2>
+                    <p>최고의 맛을 만들어가는 전문가들</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card featured">
+                        <div class="team-image">
+                            <img src="images/member.jpg" alt="찰리 김 대표">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <span>CEO & Founder</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3>찰리 김</h3>
-                        <p class="position">창립자 & CEO</p>
-                        <p class="description">미국 CIA(Culinary Institute of America) 출신의 셰프로, 한국과 미국의 맛을 조화롭게 융합한 독특한
-                            레시피를 개발합니다.</p>
+                        <div class="team-info">
+                            <h3>찰리 김</h3>
+                            <p class="team-position">창립자 & CEO</p>
+                            <p class="team-description">미국 CIA(Culinary Institute of America) 출신의 셰프로, 한국과 미국의 맛을 조화롭게
+                                융합한 독특한 레시피를 개발합니다.</p>
+                            <div class="team-skills">
+                                <span class="skill-tag">Recipe Development</span>
+                                <span class="skill-tag">Brand Strategy</span>
+                                <span class="skill-tag">Culinary Arts</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <div class="member-image">
-                            <img src="images/error.png" alt="수석 셰프">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="images/member.jpg" alt="정민수 수석 셰프">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <span>Head Chef</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3>정민수</h3>
-                        <p class="position">수석 셰프</p>
-                        <p class="description">15년 경력의 버거 전문 셰프로, 찰리스버거의 모든 레시피 개발을 총괄하고 있습니다.</p>
+                        <div class="team-info">
+                            <h3>정민수</h3>
+                            <p class="team-position">수석 셰프</p>
+                            <p class="team-description">15년 경력의 버거 전문 셰프로, 찰리스버거의 모든 레시피 개발을 총괄하고 있습니다.</p>
+                            <div class="team-skills">
+                                <span class="skill-tag">Menu Innovation</span>
+                                <span class="skill-tag">Quality Control</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <div class="member-image">
-                            <img src="images/error.png" alt="운영 매니저">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="images/member.jpg" alt="이지원 운영 총괄">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <span>Operations Manager</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3>이지원</h3>
-                        <p class="position">운영 총괄</p>
-                        <p class="description">전국 매장의 품질 관리와 서비스 표준화를 책임지고 있습니다.</p>
+                        <div class="team-info">
+                            <h3>이지원</h3>
+                            <p class="team-position">운영 총괄</p>
+                            <p class="team-description">전국 매장의 품질 관리와 서비스 표준화를 책임지고 있습니다.</p>
+                            <div class="team-skills">
+                                <span class="skill-tag">Operations</span>
+                                <span class="skill-tag">Service Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- CTA(콜 투 액션) 섹션 -->
+        <section class="brand-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>찰리스버거와 함께하세요</h2>
+                    <p>더 많은 사람들에게 특별한 맛과 경험을 전하는 찰리스버거의 여정에 동참해주세요</p>
+                    <div class="cta-buttons">
+                        <a href="menu.html" class="btn btn-primary">메뉴 보기</a>
+                        <a href="stores.html" class="btn btn-secondary">매장 찾기</a>
                     </div>
                 </div>
             </div>
@@ -209,7 +337,7 @@
             <div class="company-info">
                 <p>(주)찰리스버거 | 대표: 찰리 | 사업자등록번호: 123-45-67890</p>
                 <p>주소: 경기 성남시 분당구 판교대장로7길 6-42 101호</p>
-                <p>고객센터: 1588-1234 (평일 09:00-18:00, 주말 및 공휴일 휴무)</p>
+                <p>운영시간: 11:00 - 21:00</p>
             </div>
         </div>
         <div class="footer-links">

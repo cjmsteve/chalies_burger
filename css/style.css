@@ -703,6 +703,676 @@ header .container {
 }
 
 /* ================================
+   브랜드 페이지 전용 스타일
+   ================================ */
+
+/* 브랜드 히어로 섹션 */
+.brand-hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(255, 107, 0, 0.3));
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #fff, #FFE5D0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    opacity: 0.8;
+}
+
+.hero-scroll-indicator span {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: rotate(45deg) translateY(0);
+    }
+    40% {
+        transform: rotate(45deg) translateY(-10px);
+    }
+    60% {
+        transform: rotate(45deg) translateY(-5px);
+    }
+}
+
+/* 브랜드 소개 섹션 */
+.brand-intro {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #fff, #f9f9f9);
+}
+
+.intro-text h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #FF6B00, #E05A00);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.intro-lead {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FF6B00;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.intro-highlight {
+    background: linear-gradient(135deg, #FF6B00, #E05A00);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+    color: white;
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+}
+
+.intro-highlight p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.intro-text > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.brand-features {
+    margin: 30px 0 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.feature-icon {
+    font-size: 1.8rem;
+    margin-right: 15px;
+}
+
+.feature-text {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.intro-grid {
+    display: block;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-text h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.intro-highlight {
+    background: linear-gradient(135deg, #FF6B00, #E05A00);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+    color: white;
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+}
+
+.intro-highlight p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.intro-text > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.brand-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF6B00;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* 타임라인 섹션 */
+.brand-timeline {
+    padding: 120px 0;
+    background-color: #f9f9f9;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to bottom, #FF6B00, #E05A00);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #FF6B00, #E05A00);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 100px;
+    width: 50%;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 60px;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: 60px;
+    text-align: right;
+}
+
+.timeline-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #FF6B00;
+    border-radius: 50%;
+    top: 50px;
+    box-shadow: 0 0 0 5px white, 0 0 0 10px #FF6B00;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+    left: -70px;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+    right: -70px;
+}
+
+.timeline-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-text h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.timeline-year {
+    color: #FF6B00;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.timeline-text p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 철학 섹션 */
+.brand-philosophy {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #fff, #f9f9f9);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.philosophy-items {
+    margin-top: 40px;
+}
+
+.philosophy-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.philosophy-icon {
+    font-size: 3rem;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.philosophy-text h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.philosophy-text p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.philosophy-visual {
+    position: relative;
+}
+
+.philosophy-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.philosophy-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.image-overlay span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* 핵심 가치 섹션 */
+.core-values {
+    padding: 120px 0;
+    background-color: #f9f9f9;
+}
+
+.simple-values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.simple-value-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+}
+
+.simple-value-item .value-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: #FF6B00;
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 40px;
+    text-align: center;
+}
+
+.simple-value-content {
+    flex: 1;
+}
+
+.simple-value-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.simple-value-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* 팀 섹션 */
+.team-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #fff, #f9f9f9);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.team-card.featured {
+    grid-row: span 1;
+    border: 3px solid #FF6B00;
+}
+
+.team-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 30px 20px 20px;
+    color: white;
+}
+
+.team-social span {
+    font-size: 0.9rem;
+    background: rgba(255, 107, 0, 0.9);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.team-info {
+    padding: 30px;
+}
+
+.team-info h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.team-position {
+    color: #FF6B00;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.team-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #f0f0f0;
+    color: #666;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* CTA 섹션 */
+.brand-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #FF6B00, #E05A00);
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: white;
+    color: #FF6B00;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #FF6B00;
+}
+
+/* ================================
    메뉴 페이지 전용 스타일
    ================================ */
 
@@ -882,10 +1552,6 @@ header .container {
     margin: 0 auto 30px;
 }
 
-/* ================================
-   브랜드 페이지 전용 스타일
-   ================================ */
-
 /* 푸터 스타일 */
 footer {
     background-color: #222;
@@ -950,253 +1616,100 @@ footer .container {
     font-size: 0.9rem;
 }
 
-/* 반응형 스타일 */
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .intro-grid,
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
 
 @media (max-width: 992px) {
-    .main-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
-        padding: 20px 0;
+    .brand-stats {
+        justify-content: center;
     }
+}
 
-    .main-menu.active {
-        display: flex;
-    }
-
-    .main-menu li {
-        margin: 0;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
-    .mobile-menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(7px, 7px);
-    }
-
-    .mobile-menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    .brand-story-preview .container {
-        flex-direction: column;
-    }
-
-    .footer-info {
-        margin-right: 0;
-        margin-bottom: 30px;
-        width: 100%;
-    }
-
-    .story-section,
-    .story-section.reverse {
-        flex-direction: column;
-    }
-
-    .story-content,
-    .story-image {
-        width: 100%;
-    }
-
-    .story-content {
-        margin-bottom: 30px;
-    }
-
-    .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-    }
-
-    .page-title h1 {
+@media (max-width: 768px) {
+    .hero-content h1 {
         font-size: 2.5rem;
     }
 
-    .menu-section h2 {
-        font-size: 2rem;
+    .hero-content p {
+        font-size: 1.2rem;
     }
 
-    .event-item {
-        width: 100%;
-    }
-
-    .event-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-    }
-
-    .event-card {
-        margin: 0 auto;
-        max-width: 450px;
-    }
-}
-
-/* 모바일 가로 */
-@media screen and (max-width: 768px) {
-    .menu-item {
-        width: 100%;
-        max-width: 450px;
-    }
-
-    .slide-content h2 {
-        font-size: 2.3rem;
-    }
-
-    .slide-content p {
-        font-size: 1rem;
-    }
-
-    .event-item {
-        width: 100%;
-    }
-
-    footer .container {
-        flex-direction: column;
-    }
-
-    .footer-links {
-        margin-top: 30px;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .sitemap, .social-links {
-        margin-right: 0;
-    }
-
-    .menu-categories {
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding-bottom: 10px;
-        gap: 15px;
-    }
-
-    .menu-categories li {
-        flex-shrink: 0;
-    }
-
-    .menu-categories li a {
-        padding: 10px 20px;
-        white-space: nowrap;
-        font-size: 0.9rem;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .page-title {
-        padding: 100px 0 40px;
-    }
-
-    .page-title h1 {
+    .intro-text h2,
+    .section-header h2 {
         font-size: 2.2rem;
     }
 
-    .menu-section {
-        padding: 40px 0;
+    .brand-intro,
+    .brand-timeline,
+    .brand-philosophy,
+    .core-values,
+    .team-section {
+        padding: 80px 0;
+    }
+
+    .brand-stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .philosophy-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .philosophy-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-content h2 {
+        font-size: 2.2rem;
     }
 }
 
-/* 모바일 세로 */
-@media screen and (max-width: 576px) {
-    header .container {
-        height: 70px;
+@media (max-width: 576px) {
+    .brand-hero {
+        height: 80vh;
     }
 
-    .logo img {
-        height: 40px;
-    }
-
-    .main-visual {
-        height: 60vh;
-        padding-top: 70px;
-    }
-
-    .menu-highlight h2,
-    .store-info h2,
-    .events h2,
-    .story-content h2 {
+    .hero-content h1 {
         font-size: 2rem;
     }
 
-    .footer-links {
-        flex-direction: column;
-    }
-
-    .sitemap, .social-links {
-        margin-bottom: 20px;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .menu-navigation {
-        top: 70px;
-    }
-
-    .menu-categories li a {
-        padding: 8px 15px;
-        font-size: 0.85rem;
-    }
-
-    .menu-image {
-        height: 200px;
-    }
-
-    .page-title {
-        padding: 90px 0 30px;
-    }
-
-    .page-title h1 {
-        font-size: 1.8rem;
-    }
-
-    .page-title p {
+    .hero-content p {
         font-size: 1rem;
     }
 
-    .menu-section h2 {
+    .intro-text h2,
+    .section-header h2 {
         font-size: 1.8rem;
     }
 
-    .menu-content {
+    .timeline-content {
+        margin-left: 40px;
         padding: 20px;
     }
 
-    .menu-name-price h3 {
-        font-size: 1.3rem;
+    .brand-stats {
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    .price {
-        font-size: 1.1rem;
-    }
-
-    .menu-desc {
-        font-size: 0.9rem;
-    }
-
-    .event-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .event-image {
-        height: 200px;
+    .stat-item {
+        flex: 1;
+        min-width: 120px;
     }
 }
